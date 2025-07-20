@@ -87,12 +87,14 @@ Rapid and **unplanned urban expansion** in low-lying coastal areas—especially 
 The project includes an ArcGIS Pro Add-In developed using the ArcGIS Pro SDK for .NET to allow planners and GIS analysts to trigger shoreline prediction directly inside the ArcGIS environment.
 
 ⚙️ How It Works
+
 1- User Inputs Prediction Year:
 A custom ArcGIS Pro UI element prompts the user to enter a target year (e.g., 2036).
 
 2- Python AI Model Execution:
 Upon clicking the prediction button, the add-in calls a Python script using a trained AI model via a separate Flask-free pipeline. The script:
-	Runs the shoreline prediction model
+	
+ 	Runs the shoreline prediction model
 	Converts the output to GeoDataFrame
 	Reprojects to WGS84
 	Saves the result as a Shapefile
@@ -102,7 +104,8 @@ The resulting shapefile is automatically loaded into the current ArcGIS Pro map 
 
 📁 Paths & Requirements
 Ensure you have the following paths set correctly in your environment:
-	Python path: your arcgis-clone Conda environment (used in addin.py)
+	
+ 	Python path: your arcgis-clone Conda environment (used in addin.py)
 	Script path: addin.py located inside react-app/backend
 	Model input: a CSV such as Test.csv in the same directory
 	Output: predicted shoreline shapefile in the output/ folder
