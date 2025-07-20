@@ -1,0 +1,113 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "Final_ProjectContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Graduation_Project",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Accounts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BUILDINGS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FINAL_TRANSECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_1986_2023__PROJECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_1986_SEGMENTED_PROJECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2007_SEGMENTED_PROJECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2013_SEGMENTED_PROJECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2018_SEGMENTED_PROJECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2023_AFTER]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2023_CVI_1KM]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2023_POINTS_100M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2023_SEGMEN_BUFFER]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_2023_SEGMENTED_PROJECT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINE_RATES_SEGMENTED_CLOSEST]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SHORELINES_1986_2100]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserLocations]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": true,
+   "UseT4": false,
+   "UseT4Split": false
+}

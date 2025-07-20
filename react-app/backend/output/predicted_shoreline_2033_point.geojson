@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "predicted_shoreline_2033_point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "LRR": -1.0, "Sea_Level_Rise_Trend_mm_year": 3.0, "NSM": -3.0, "Current_Position_X": 774393.57, "Current_Position_Y": 3456415.39, "Elevation": 0.0, "Coastal_Slope": -2.0 }, "geometry": { "type": "Point", "coordinates": [ 774390.711145999608561, 3456378.489127999171615 ] } }
+]
+}

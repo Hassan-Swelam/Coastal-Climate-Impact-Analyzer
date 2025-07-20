@@ -1,0 +1,13 @@
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\bin\Debug\net8.0-windows\ShorelinePredictionAddIn.deps.json
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\bin\Debug\net8.0-windows\ShorelinePredictionAddIn.dll
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\bin\Debug\net8.0-windows\ShorelinePredictionAddIn.pdb
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.csproj.AssemblyReference.cache
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.GeneratedMSBuildEditorConfig.editorconfig
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.AssemblyInfoInputs.cache
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.AssemblyInfo.cs
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.csproj.CoreCompileInputs.cache
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.sourcelink.json
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.dll
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\refint\ShorelinePredictionAddIn.dll
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ShorelinePredictionAddIn.pdb
+E:\Geomatics\ITI\GP\WEB-APP\ShorelinePredictionAddIn\obj\Debug\net8.0-windows\ref\ShorelinePredictionAddIn.dll

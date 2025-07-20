@@ -1,0 +1,139 @@
+/* LayerDownload.css */
+.download-component {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 16px 0;
+}
+
+.download-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  justify-content: center;
+  background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.clear-all-btn {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.clear-all-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #c82333, #bd2130);
+}
+
+.download-progress {
+  background: rgba(10, 4, 49, 0.1);
+  border: 1px solid rgba(10, 4, 49, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #0a0431;
+  text-align: center;
+  font-weight: 500;
+}
+
+.download-info {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.download-info small {
+  color: #666;
+  font-size: 12px;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Individual layer download button (for layer list) */
+.layer-download-btn {
+  /* background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44); */
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-left: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.layer-download-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .download-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .download-btn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Integration with existing layer panel */
+.sidebar .download-component {
+  margin-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 16px;
+}
+
+.sidebar .download-component .download-controls {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar .download-component .download-btn {
+  width: 100%;
+  min-width: unset;
+}

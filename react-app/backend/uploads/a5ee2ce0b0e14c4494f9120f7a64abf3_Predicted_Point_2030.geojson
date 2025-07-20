@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "name": "Predicted Point 2030",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32635"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          749681.1153470002,
+          3433420.89537
+        ]
+      },
+      "properties": {
+        "ObjectID": 1751953992415,
+        "year": 2030
+      }
+    }
+  ]
+}

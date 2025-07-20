@@ -1,0 +1,684 @@
+.map-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+}
+
+.controls {
+  position: absolute;
+  top: 111px;
+  left: 35px;
+  z-index: 1000;
+}
+
+.controls2 {
+  position: absolute;
+  top: 155px;
+  left: 35px;
+  z-index: 1000;
+}
+.controls2 button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.controls2 button:hover {
+  background: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.controls button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:hover {
+  background: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Existing typing animation styles */
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.typing-content {
+  text-align: center;
+}
+
+.text-cont h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* background: linear-gradient(90deg, #1a3c6e, #00c4b4, #ff6f61); */
+  /* Gradient from dark blue to teal to coral */
+  background: linear-gradient(135deg, #0a0431, #500754, #58082d, #4f0707);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Makes the text transparent so the gradient shows through */
+  display: inline-block;
+  /* Ensures gradient applies correctly */
+}
+
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 2.5rem;
+  background-color: #0a0431;
+  /* Matches the start of the gradient for consistency */
+  animation: blink 0.7s infinite;
+  position: relative;
+  top: 4px;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.map-div {
+  width: 100%;
+  height: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.map-div:hover {
+  border-color: #0a0431;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .map-div {
+    height: 400px;
+  }
+}
+
+.container {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  padding: 3px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  border-radius: 0.9em;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 0.9em;
+  z-index: -10;
+  filter: blur(0);
+  transition: filter 0.4s ease;
+}
+
+/* Parent container to center the button */
+.parent-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+.container:hover::before {
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  filter: blur(1.2em);
+}
+
+.container:active::before {
+  filter: blur(0.2em);
+}
+
+.input__search {
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  position: relative;
+}
+
+.input {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #e8e8e8;
+  box-shadow: 5px 5px 10px #c5c5c5, -5px -5px 10px #ffffff;
+  transition: 0.3s;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+}
+
+.styled-button {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1), 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #292929;
+  white-space: nowrap;
+}
+
+.styled-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1), 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.styled-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 360px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: fit-content;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.sidebar-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.layer-count {
+  background: #0d0639;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Layer List */
+.layer-list {
+  max-height: 450px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.layer-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.layer-item:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.layer-info {
+  flex: 1;
+}
+
+.layer-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.layer-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.layer-checkbox input[type="checkbox"]:checked {
+  background: #0d0639;
+  border-color: #0d0639;
+}
+
+.layer-checkbox input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.layer-details {
+  flex: 1;
+}
+
+.layer-name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.layer-name {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px; /* or whatever width you want */
+  display: inline-block; /* or block */
+}
+
+.layer-type {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.layer-type.shoreline {
+  color: #28a745;
+}
+
+.layer-type.predicted {
+  color: #667eea;
+}
+
+/* Remove Layer Button */
+.remove-layer-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.remove-layer-btn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.control-container {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Layer Indicator Styles - Add these to your MapComponents.css */
+
+.layer-name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.layer-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.line-indicator {
+  background-color: transparent;
+  padding: 2px 0;
+}
+
+.line-sample {
+  width: 100%;
+  height: 3px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 1px;
+}
+
+.point-indicator {
+  background-color: transparent;
+  padding: 2px;
+  border-radius: 50%;
+    width: 8px;
+  height: 8px;
+}
+
+
+.point-sample {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.polygon-indicator {
+  background-color: transparent;
+}
+
+.polygon-sample {
+  width: 22px;
+  height: 12px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 1px;
+}
+
+/* Optional: Add some spacing adjustments to existing layer styles */
+.layer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.layer-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.layer-type {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+
+/* Point Prediction Form Styles */
+.point-form-container {
+  /* background: rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 100%;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
+  position: sticky;
+  overflow: hidden;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.point-form-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  /* background: linear-gradient(135deg, #0a0431, #26204d, #3d2a36, #b28e9d); */
+  /* background: linear-gradient(135deg, #0a0431, #500754, #58082d, #4f0707); */
+  background-color: #0a0431;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.point-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* .form-input {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: black;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+} */
+
+.form-input {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: rgb(255,255,255);
+  color: #0a0431;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+/* 
+.form-input::placeholder {
+  color: black
+} */
+
+.form-input::placeholder {
+  color: #0a0431
+}
+
+.form-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 3px #0a0431;
+  transform: translateY(-2px);
+}
+
+.map-select-button {
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.map-select-button.select-mode {
+  background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44);
+  color: white;
+}
+
+.map-select-button.cancel-mode {
+  background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44);
+  color: white;
+}
+
+.map-select-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.predict-action-button {
+  grid-column: 1 / -1;
+  /* Span full width */
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 300px;
+  align-items: center;
+}
+
+.predict-action-button:hover {
+  background: linear-gradient(135deg, #030017, #1a153a, #0f091b, #322d44);
+  background-size: 200%;
+  animation: gradientFlow 3s infinite linear;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.predict-action-button:disabled {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.click-mode-alert {
+  grid-column: 1 / -1;
+  background: rgba(255, 243, 205, 0.2);
+  border: 1px solid rgba(255, 102, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: #ff6600;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.layer-actions {
+  display: flex;
+  align-items: left;
+  
+}
